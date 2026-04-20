@@ -7,10 +7,9 @@
 
     <h2>Edit User</h2>
 
-    <form action="/user/update/{{$user->id}}" method="POST">
+    <form action="{{ route('user.update', $user->id) }}" method="POST">
 
         @csrf
-        @method('PUT')
 
         <label>Name</label>
         <input type="text" name="name" value="{{$user->name}}">
@@ -33,7 +32,7 @@
 
     <br>
 
-    <a href="/user">Back</a>
+    <a href="{{ route('home') }}">Back</a>
 
     </body>
 </html>

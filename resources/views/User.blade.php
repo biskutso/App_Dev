@@ -7,20 +7,20 @@
 
         <h2>Add User</h2>
 
-            <form action="/user/store" method="POST">
+            <form action="{{ route('user.store') }}" method="POST">
             @csrf
 
-                <label>Name</label>
+                <label>Name:</label>
                 <input type="text" name="name">
 
                 <br><br>
 
-                <label>Email</label>
+                <label>Email:</label>
                 <input type="email" name="email">
 
                 <br><br>
 
-                <label>Password</label>
+                <label>Password:</label>
                 <input type="password" name="password">
 
                 <br><br>
@@ -52,9 +52,10 @@
                 <td>{{$user->password}}</td>
 
                 <td>
-                    <a href="/user/edit/{{$user->id}}">Edit</a>
+                    <a href="{{ route('user.show', $user->id) }}">View |</a>
+                    <a href="{{ route('user.edit', $user->id) }}">Edit |</a>
 
-                    <form action="/user/delete/{{$user->id}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                    <form action="{{ route('user.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');" style="display:inline">
                         @csrf
                         @method('DELETE')
                         <button type="submit">Delete</button>
