@@ -20,7 +20,7 @@ class userController extends Controller
             'password'=>Hash::make($request->password)
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('uhome');
     }
 
     public function show($id){
@@ -41,7 +41,7 @@ class userController extends Controller
             'password'=>Hash::make($request->password)
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('uhome');
 
     }
 
@@ -49,6 +49,6 @@ class userController extends Controller
 	    $user = User::findOrFail($id);
 	    $user->delete();
 
-	    return redirect()->route('home');
+	    return redirect()->route('uhome');
     }
 }

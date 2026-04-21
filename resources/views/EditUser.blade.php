@@ -32,7 +32,7 @@
 
     <br>
 
-    <a href="{{ route('home') }}">Back</a>
+    <a href="{{ route('uhome') }}">Back</a>
 
     </body>
 </html>

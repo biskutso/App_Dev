@@ -25,8 +25,8 @@
         <label>Gender:</label>
         <select name="gender">
             <option value="" disabled selected>Select your option</option>
-            <option value="M">Male</option>
-            <option Value="F">Female</option>
+            <option value="M" {{ (isset($student) && $student->gender == 'M') ? 'selected' : '' }}>Male</option>
+            <option Value="F" {{ (isset($student) && $student->gender == 'F') ? 'selected' : '' }}>Female</option>
         </select>
 
         <br><br>
@@ -41,7 +41,9 @@
 
         <br><br>
 
-        <button type="submit">Add Student</button>
+        <button type="submit">Update Student</button>
+        <br><br>
+        <a href=" {{ route('home') }}"> Back to students List </a>
 
     </form>
 </div>

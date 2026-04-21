@@ -11,27 +11,27 @@
             @csrf
 
                 <label>First Name:</label>
-                <input type="text" name="fname">
+                <input type="text" name="fname" placeholder="First Name..." required>
 
                 <br><br>
 
                 <label>Middle Name:</label>
-                <input type="text" name="mname">
+                <input type="text" name="mname" placeholder="Middle Name...">
 
                 <br><br>
 
                 <label>Last Name:</label>
-                <input type="text" name="lname">
+                <input type="text" name="lname" placeholder="Last Name..." required>
 
                 <br><br>
 
                 <label>Suffix:</label>
-                <input type="text" name="sname">
+                <input type="text" name="sname" placeholder="Ex. Jr,Sr,...(Optional)">
 
                 <br><br>
 
                 <label>Gender:</label>
-                <select name="gender">
+                <select name="gender" required>
                     <option value="" disabled selected>Select your option</option>
                     <option value="M">Male</option>
                     <option Value="F">Female</option>
@@ -40,12 +40,12 @@
                 <br><br>
 
                 <label>Birth Date:</label>
-                <input type="date" name="bdate">
+                <input type="date" name="bdate" required>
 
                 <br><br>
 
                 <label>Email:</label>
-                <input type="email" name="email">
+                <input type="email" name="email" placeholder="example@gmail.com" required>
 
                 <br><br>
 

@@ -39,7 +39,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Password</th>
+                <!-- <th>Password</th> -->
                 <th>Action</th>
             </tr>
 
@@ -49,7 +49,7 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
-                <td>{{$user->password}}</td>
+                <!-- <td>{{$user->password}}</td> -->
 
                 <td>
                     <a href="{{ route('user.show', $user->id) }}">View |</a>
